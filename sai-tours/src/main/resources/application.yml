@@ -1,0 +1,8 @@
+server:
+  port: 2024
+# this applies to all the beans in the context  
+spring:
+  main:
+    lazy-initialization: true
+    
+  
