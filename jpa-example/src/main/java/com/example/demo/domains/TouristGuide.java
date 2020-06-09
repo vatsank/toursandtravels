@@ -1,7 +1,10 @@
 package com.example.demo.domains;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AccessLevel;
@@ -23,4 +26,6 @@ public class TouristGuide {
 	String firstName;
 	String lastName;
 	long mobileNumber;
+	
+	
 }
