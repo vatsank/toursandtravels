@@ -6,5 +6,5 @@ public class PointCutConfigs {
 
 	
 	@Pointcut("execution(* com.example.demo.services.TouristGuideRepo.*(..))")
-	public void logInfo() {}
+	public void allMethods() {}
 }
