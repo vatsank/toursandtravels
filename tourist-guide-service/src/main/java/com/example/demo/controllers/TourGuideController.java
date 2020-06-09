@@ -2,7 +2,9 @@ package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +12,9 @@ import com.example.demo.domains.TouristGuide;
 import com.example.demo.services.TouristGuideService;
 
 import java.util.*;
+
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 public class TourGuideController {
 
@@ -24,10 +29,24 @@ public class TourGuideController {
 		return this.service.findAll();
 	}
 	
-	@PostMapping(path = "/guides")
-	public TouristGuide addGuide(@RequestBody TouristGuide entity){
+	@GetMapping(path = "/guides/{id}")
+	public TouristGuide findById(@PathVariable("id") int id){
 	
+		return this.service.findById(id);
+	}
+	
+	
+	@PostMapping(path = "/guides")
+	public TouristGuide addGuide(@RequestBody TouristGuide entity,
+			              HttpServletResponse resp){
+	
+		resp.setStatus(201);
 		return this.service.add(entity);
 	}
 	
+	@PutMapping(path = "/guides")
+	public TouristGuide updateGuide(@RequestBody TouristGuide entity){
+	
+		return this.service.update(entity);
+	}
 }
