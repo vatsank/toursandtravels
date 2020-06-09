@@ -33,7 +33,5 @@ public class Catalog {
 	 String  description;
 	 LocalDate releaseDate;
 	
-
-
 	
 }
