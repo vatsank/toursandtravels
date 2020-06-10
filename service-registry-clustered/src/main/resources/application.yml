@@ -18,12 +18,12 @@ eureka:
 ---
 spring:
   profiles:
-  - peer1
+  - eureka-peer1
   application:
     name: eureka-server-cluster
     
 server:
-  port: 8861
+  port: 8461
 eureka:
   instance:
     hostname: eureka-peer1
@@ -32,16 +32,16 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-peer2:8961/eureka/   
+      defaultZone: http://eureka-peer2:8561/eureka/   
 ---
 spring:
   profiles:
-  - peer2
+  - eureka-peer2
   application:
     name: eureka-server-cluster
     
 server:
-  port: 8961
+  port: 8561
 eureka:
   instance:
     hostname: eureka-peer2
@@ -50,5 +50,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-peer1:8861/eureka/   
+      defaultZone: http://eureka-peer1:8461/eureka/   
     
