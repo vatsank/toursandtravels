@@ -22,6 +22,8 @@ public class PaymentClientController {
 		// Since SRD is available we use a logical name
 	  String resp = template.getForObject("http://PAYMENT-SERVICE/payment", String.class);
 	
-	   return resp;
+	  String guides = template.getForObject("http://TOURIST-GUIDE-SERVICE/api/v1/guides", String.class);
+
+	   return resp + guides;
 	}
 }
