@@ -19,7 +19,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-
 @AllArgsConstructor()
 @NoArgsConstructor
 @Data

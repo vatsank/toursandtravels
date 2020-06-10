@@ -32,6 +32,20 @@ public class JpaExampleApplication {
   		  
             catservice.findAll().forEach(System.out::println);
 	
+            System.out.println("Find By FirstName");
+            
+            service.findByFirstName("Ramesh").forEach(System.out::println);
+            
+            
+            System.out.println("Find By FirstName and LastName");
+            
+            service.findByBothNames("Suresh","Shetty").forEach(System.out::println);
+            
+            service.update();
+            
+            service.findAll().forEach(System.out::println);
+        	
+            ctx.close();
 	}
 
 	@Bean

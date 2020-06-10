@@ -25,4 +25,19 @@ public class TouristGuideService {
 		
 		return repo.findAll();
 	}
+	
+	public List<TouristGuide> findByFirstName(String firstName){
+		
+		return repo.findGuideByFirstName(firstName);
+	}
+	
+   public List<TouristGuide> findByBothNames(String firstName,String lastName){
+		
+		return repo.findByFirstAndLastName(firstName, lastName);
+	}
+   
+   public void update() {
+	   
+	   repo.updatePrefix("Dr.");
+   }
 }
