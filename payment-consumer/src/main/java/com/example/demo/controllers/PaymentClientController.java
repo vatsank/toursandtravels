@@ -20,10 +20,14 @@ public class PaymentClientController {
 	//String resp2 = template.getForObject("http://localhost:2020/payment", String.class)
 		
 		// Since SRD is available we use a logical name
-	  String resp = template.getForObject("http://PAYMENT-SERVICE/payment", String.class);
-	
-	  String guides = template.getForObject("http://TOURIST-GUIDE-SERVICE/api/v1/guides", String.class);
+//	  String resp = template.getForObject("http://PAYMENT-SERVICE/payment", String.class);
+//	
+//	  String guides = template.getForObject("http://TOURIST-GUIDE-SERVICE/api/v1/guides", String.class);
 
-	   return resp + guides;
+	  String result = template.getForObject("http://EUREKA-DEFAULT/cluster", String.class);
+	  
+//	   return resp + guides;
+	  
+	  return result;
 	}
 }
