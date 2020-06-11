@@ -1,0 +1,17 @@
+server:
+  port: 4040
+
+  servlet:
+    context-path: /api/v1
+
+
+spring:
+  application:
+    name: tourist-guide-service
+  
+  cloud:
+    config:
+      uri:
+      - http://localhost:1010
+
+
