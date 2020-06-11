@@ -1,0 +1,16 @@
+server:
+  port: ${random.int(5555,5560)}
+
+  servlet:
+    context-path: /api/v1
+
+
+spring:
+  application:
+    name: image-service
+  
+  cloud:
+    config:
+      uri:
+      - http://localhost:1010
+
