@@ -1,18 +1,15 @@
  server:
-  port: 5757
+  port: 8484
 
   servlet:
     context-path: /api/v1
 
  spring:
   application:
-    name: image-service
+    name: image-client
   cloud:
     config:
       uri:
       - http://localhost:1010
  
- eureka:
-  instance:
-    instance-id: payment-service:44
-   
+ 
