@@ -12,13 +12,13 @@ public class ImageController {
 	@Autowired
 	private Image image;
 	
-	@Value("${eureka.instance.instance-id}")
-	private String instanceId;
+//	@Value("${eureka.instance.instance-id}")
+//	private String instanceId;
 	
 	@GetMapping(path = "/images/{id}")
 	public Image getImage(@PathVariable("id") int id) {
 		
-		image.setDescription(instanceId);
+		// image.setDescription(instanceId);
 		return image;
 	}
 }

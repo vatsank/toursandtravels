@@ -7,12 +7,12 @@
  spring:
   application:
     name: image-service
-  cloud:
-    config:
-      uri:
-      - http://localhost:1010
- 
- eureka:
-  instance:
-    instance-id: payment-service:44
-   
+#  cloud:
+#    config:
+#      uri:
+#      - http://localhost:1010
+# 
+# eureka:
+#  instance:
+#    instance-id: payment-service:44
+#   
