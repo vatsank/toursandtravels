@@ -16,3 +16,8 @@ management:
       exposure:
         include:
         - "*"
+        
+logging:
+  level:
+    com.netflix.ribbon: DEBUG 
+          

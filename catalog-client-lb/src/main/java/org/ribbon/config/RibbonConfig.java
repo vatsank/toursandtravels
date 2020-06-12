@@ -12,9 +12,7 @@ public class RibbonConfig {
 	@Autowired
     IClientConfig config;
 	
-  
-
-    
+      
 	 @Bean
 	    public IRule ribbonRule(IClientConfig config) {
 	        

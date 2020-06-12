@@ -8,12 +8,10 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ClientController {
 	
-
-		
+			
 		@Autowired
 		private RestTemplate template;
 
-		
 		
 		
 		@GetMapping(path = "/client")
