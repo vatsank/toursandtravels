@@ -11,11 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.domains.TouristGuide;
 import com.example.demo.services.TouristGuideService;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.*;
 
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
+@Slf4j
 public class TourGuideController {
 
 	
@@ -26,6 +29,7 @@ public class TourGuideController {
 	@GetMapping(path = "/guides")
 	public List<TouristGuide> findAll(){
 	
+		log.info("Tourist Controller Find all called");
 		return this.service.findAll();
 	}
 	

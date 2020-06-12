@@ -4,10 +4,19 @@ server:
 spring:
   application:
     name: gateway-proxy-service  
-
+    
+     
+zuul:
+  routes:
+    production:
+    path: /catlog-service/**
+    url: http://localhost:3333/
+   
 management:
   endpoints:
     web:
       exposure:
         include:
         - "*"
+        
+        
