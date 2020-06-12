@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles:
+  - dev
+  application:
+    name: development
+server:
+  port: 3232
+  
+---
+spring:
+  profiles:
+  - prod
+  application:
+    name: production
+server:
+  port: 3333
+
+
