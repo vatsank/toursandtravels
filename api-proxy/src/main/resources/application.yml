@@ -1,0 +1,13 @@
+server:
+  port: 7575
+  
+spring:
+  application:
+    name: gateway-proxy-service  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
