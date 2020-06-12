@@ -7,16 +7,29 @@ spring:
     
      
 zuul:
+  host:
+    socket-timeout-millis: 2000000
+  ribbon:
+     eager-load:
+      enabled: true
+      
   routes:
-    production:
-    path: /catlog-service/**
-    url: http://localhost:3333/
-   
+    catlog-service:
+       path: /catlog-service/**
+       url: http://localhost:3333/
+    
+  
+  
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
 management:
   endpoints:
     web:
       exposure:
         include:
         - "*"
-        
-        

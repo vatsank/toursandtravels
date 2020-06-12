@@ -10,6 +10,8 @@ catalog-service-lb:
     listOfServers: localhost:3232,localhost:3333
     ServerListRefreshInterval: 15000
 
+
+
 management:
   endpoints:
     web:
