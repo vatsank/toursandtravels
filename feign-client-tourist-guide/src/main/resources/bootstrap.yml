@@ -1,0 +1,17 @@
+server:
+  port: 4444
+
+  servlet:
+    context-path: /api/v1
+
+
+spring:
+  application:
+    name: tourguide-feign-client
+  
+  cloud:
+    config:
+      uri:
+      - http://localhost:1010
+
+
