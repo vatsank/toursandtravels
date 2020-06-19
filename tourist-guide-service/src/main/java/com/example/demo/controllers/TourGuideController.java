@@ -27,7 +27,7 @@ public class TourGuideController {
 	
 	
 	@GetMapping(path = "/guides")
-	public List<TouristGuide> findAll(){
+	public List<TouristGuide> findAll() throws InterruptedException{
 	
 		log.info("Tourist Controller Find all called");
 		return this.service.findAll();

@@ -28,8 +28,9 @@ public class TouristGuideService {
 		
 		return repo.save(entity);
 	}
-	public List<TouristGuide> findAll(){
+	public List<TouristGuide> findAll() throws InterruptedException{
 		
+		Thread.sleep(10000);
 		return repo.findAll();
 	}
 	

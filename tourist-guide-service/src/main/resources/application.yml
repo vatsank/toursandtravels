@@ -21,4 +21,15 @@ management:
         include:
         - "*"      
 
-       
+#       You have to explicitly set eureka.client.healthcheck.enabled=true to link the Spring Boot health indicator to the Eureka registration. Source code reference: here.
+
+#       application.yml. 
+
+#eureka:
+#  client:
+#    healthcheck:
+#      enabled: true
+#[Warning]
+#eureka.client.healthcheck.enabled=true should only be set in application.yml. Setting the value in bootstrap.yml will cause undesirable side effects like registering in eureka with an UNKNOWN status.
+#
+#If you require more control over the health checks, you may consider implementing your own com.netflix.appinfo.HealthCheckHandler.

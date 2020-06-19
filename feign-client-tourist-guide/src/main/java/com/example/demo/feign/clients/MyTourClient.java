@@ -14,3 +14,6 @@ public interface MyTourClient {
 	  @RequestMapping(method = RequestMethod.GET, value = "/api/v1/guides")
 	   List<TouristGuide> findAll();
 }
+
+
+
