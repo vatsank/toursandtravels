@@ -1,0 +1,33 @@
+#spring:
+#  application:
+#    name: eureka-payment-service
+#  
+#  
+#server:
+#  port: 7070
+#  
+#    
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://eureka-peer2:8561/eureka,
+#                            http://eureka-peer1:8461/eureka
+
+spring:
+  application:
+    name: eureka-payment-service
+  
+  
+server:
+  port: 7070
+  
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
